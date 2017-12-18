@@ -188,3 +188,24 @@ learning about how a computer works
         
     Internet
     
+    connects everyone through electronic, wireless and network means
+    
+    some services are
+    
+        World Wide Web: It is a collection of billions of web pages or documents that can be viewed with a web browser.
+        
+        Email: It enables the users to send or receive messages online.
+        
+        Social media: It includes the websites and apps that enable the users to share pictures, comments, audio and video.
+        
+        Online games: People can play online games if they have internet access.
+        
+        Software updates: People can download latest versions of operating system, application software and other software from the internet.
+        
+    Intranet
+    
+        Intranet is a private network that belongs to a particular organization
+    
+    Extranet
+
+        Extranet is a part of an organization's intranet. It is a communication network that is based on internet protocols (TCP/IP). It provides controlled access to firm's intranet to its trading partners and customers
