@@ -113,7 +113,78 @@ learning about how a computer works
                 RAM -means it loses its data, when you turn on your computer, hard disk sends data to the RAM, upon turning it of RAM loses it
                 
                 ROM - means it keeps it data, important for booting processes
-         
-    
-        
                 
+            Secondary Memory -
+            
+                a ROM memory that the CPU has to use the primary memory in order to get it
+                
+                    Hard disk - It is a rigid magnetic disc that is used to store data. It permanently stores data and is located within a drive unit.
+                    
+                    Optical disk- It has a plastic coating. The data in optical disc is recorded digitally and the recorded data is read with laser that scans its surface.
+                    
+                    Pen drive - It is a compact secondary storage device. It is connected to a computer through a USB port to store or retrieve data.
+                    
+                    
+                    
+            Memory Units
+            
+                Memory units are used to measure and represent data. Some of the commonly used memory units are:
+                
+                    1) Bit: The computer memory units start from bit. A bit is the smallest memory unit to measure data stored in main memory and storage devices. A bit can have only one binary value out of 0 and 1.
+                    
+                    2) Byte: It is the fundamental unit to measure data. It contains 8 bits or is equal to 8 bits. Thus a byte can represent 2*8 or 256 values.
+                    
+                    3) Kilobyte: A kilobyte contains 1024 bytes.
+                    
+                    4) Megabyte: A megabyte contains 1024 kilobytes.
+                    
+                    5) Gigabyte: A gigabyte contains 1024 megabyte.
+                    
+                    6) Terabyte: A terabyte contains 1024 gigabytes.
+                    
+                    
+                    
+    Computer Network
+        
+        anytime computers are made to share some sort of connection and are aware of each other, this is a network, when all are not aware, this is hacking, and when data is transported this is an active network
+        
+        As the name suggests, the local area network is confined to small geographical area like within an office, company, school or any other organization. Ethernet cables are used to set up LAN.
+        
+        Metropolitan area network extends over a metropolitan area like a city or town. It is set up by connecting the local area networks of the city or town. It is ideal for the people of a particular region to share data or information
+        
+        Wide area network covers large geographical area. It is not confined within office, school or a town. It is mainly set up by telecommunication lines. Big organizations like banks and multinational companies communicate with their branches and customers through WAN. Internet that we use is also a WAN.
+    
+    
+    Computer Virus
+    
+        the computer form of sickness, unwanted software that causes significant detrimental interefence in the functioning of the computer. Any malicious software activity to a computer that leads to the harming of the computer or the inablity of the user of the use it efficiently is known as a virus. Any hardware activity is known as breaking the computer
+        
+        
+        
+            Overwrite Virus - Overwrite virus is the simplest computer virus. It overwrites the code of infected file with its own malicious code. The content of infected file is replaced partially or completely but the size of file does not change.
+                
+            Macro virus- a macro is a single insturction by a programming language which intrprets as multiple tasks for the CPU. A macro virus gets to a file and corrputs its macros, it is deadly, because when a program opens the corrputed file the macros sends corruptive instruction to the CPU
+            
+            Boot virus - changes how your computer boots up enters though corrupt media files, infected storage devices and insecure computer networks.
+            
+            Resident Virus - stays in the RAM and corrupts the computer once RAM
+            
+            Multipartite Virus - spreads and infects everything its capable of
+            
+            File Infector Virus - most common, found in execuatables. Upon execution it rewrites the files destroying them
+            
+        Computer Worm - its not like a virus because it does not need a host program to cause problems. Comes mostly in e-mails
+            
+        Trojan Horse - hides in a program ,upon installation it can
+                        provide unauthorized access
+                        sends files places
+                        make computer do unwanted things
+
+
+    Number Systems
+    
+        those binary, octal, hex, and decimal number system that computers turn inital data too as an understanding point
+        
+        
+    Internet
+    
