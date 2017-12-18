@@ -103,7 +103,17 @@ learning about how a computer works
          
          however based on spatial reference we have four types
          
-         Register memory - hold in register found in CPU, holds data, instructions and memory addreses, that the CPU needs and users work with it using Aseembly Languages such as MIPS
+             Register memory - hold in register found in CPU, holds data, instructions and memory addreses, that the CPU needs and users work with it using Aseembly Languages such as MIPS
+             
+             Cache memory - faster than main memory, if CPU finds what it needs there it uses it and makes system performance faster
+         
+         
+            Primary Memory -
+         
+                RAM -means it loses its data, when you turn on your computer, hard disk sends data to the RAM, upon turning it of RAM loses it
+                
+                ROM - means it keeps it data, important for booting processes
+         
     
         
                 
