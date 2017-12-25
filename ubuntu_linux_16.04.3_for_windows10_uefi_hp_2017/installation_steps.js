@@ -18,6 +18,8 @@ partition the disk
     
 then restart turn on with boot mangaer
 
+https://h30434.www3.hp.com/t5/Notebook-Operating-System-and-Recovery/Change-Boot-Sequence-and-How-to-Boot-from-USB/td-p/6132655
+
     for your hp laptop turn off then turn on with esc button to activate the boot manger
     
     choose the usb option your new bootable drive
