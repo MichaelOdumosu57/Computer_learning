@@ -1,0 +1,44 @@
+https://bogdanvlviv.github.io/posts/tmux/how-to-install-the-latest-tmux-on-ubuntu-16_04.html
+
+tmux is a “terminal multiplexer”, it enables a number of terminals (or windows) to be accessed and controlled from a single terminal
+
+    Install the download, build and tmux dependencies
+
+    $ sudo apt update
+
+
+    to get the latest version , compile & install software from source.  need to satisfy the build and tmux dependencies to compile  software. To do this,  install the automake, build-essential, pkg-config, libevent-dev, libncurses5-dev packages:
+
+    $ sudo apt install -y automake
+    $ sudo apt install -y build-essential
+    $ sudo apt install -y pkg-config
+    $ sudo apt install -y libevent-dev
+    $ sudo apt install -y libncurses5-dev
+
+
+    need to choose the target directory to download tmux.  download in the /tmp/tmux. Before downloading we need to try to remove /tmp/tmux to ensure that this directory isn’t busy:
+
+            $ rm -fr /tmp/tmux
+
+        Download tmux to /tmp/tmux:
+            $ git clone https://github.com/tmux/tmux.git /tmp/tmux
+
+        Go to the /tmp/tmux directory:
+            $ cd /tmp/tmux
+
+        Execute autogen.sh file:
+            $ sh autogen.sh
+
+        Configure and compile the tmux binaries:
+            $ ./configure && make
+
+        Install the binaries into the system:
+            $ sudo make install
+
+        Go back the previous directory:
+            $ cd -
+
+        We don’t need to keep the downloaded tmux binaries, so we can remove /tmp/tmux:
+            rm -fr /tmp/tmux
+
+        Successfully finishing all steps above we can use the latest tmux. Enjoy!
