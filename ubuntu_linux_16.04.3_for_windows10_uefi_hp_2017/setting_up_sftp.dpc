@@ -1,0 +1,124 @@
+http://www.ubuntugeek.com/install-and-configure-sftp-server-on-ubuntu-16-04-xenial-xerus-server.html
+
+install secureshell
+    sudo apt-get install mysecureshell
+
+add users
+    sudo useradd -m -s /usr/bin/mysecureshell test1
+    sudo passwd test1
+
+    Adding Existing user to MySecureShell Server
+
+        sudo usermod -s /usr/bin/mysecureshell test2
+
+        or
+
+        sudo vim /etc/passwd
+
+        Change columns "shells" and replace it by "/bin/MySecureShell".
+
+            test2:x:1006:500:DSE Testing:/home/sftpusers/test2:/bin/sh
+
+            changes to
+
+            test2:x:1006:500:DSE Testing:/home/sftpusers/test2:/bin/MySecureShell
+
+
+            didnt  work because test2 did not exist in /etc/passwd
+
+
+so I tried
+
+https://45squared.com/setting-sftp-ubuntu-16-04/
+
+    switch to root user
+        
+        $ sudo -s
+
+    add a new user but I rather use my own custom user autospark because I just want my chromebook to sftp
+
+        adduser [your username]
+
+    so ill force autospark to the the home directory i think problems happen if i let it into root
+    
+        
+
+    This changes our permissions to only allow writing by the user who owns the directory while read and execute to everyone else.
+        $ chmod 755 /home
+
+    This changes our directory to be owned by the user root and group root which satisfies our directory structure requirements.
+        $ chown root:root /var/www
+
+    this gives ownwership  to autospark
+        $ chown -R autospark:autospark /home
+
+
+
+ Locking Down our User
+
+        sudo /etc/ssh/sshd_config
+
+        Find the section Subsystem sftp /var/lib/openssh/sftp-server Comment it out so it looks like #Subsystem sftp /var/lib/openssh/sftp-server
+
+        --found Subsystem sftp /user/lib/openssh/sftp-server so i did nothting
+
+        Add the line Subsystem sftp internal-sftp right below it.
+
+        Add the following lines to the very bottom of the file:
+        
+        
+            Match User autospark ChrootDirectory /home
+            X11Forwarding no
+            AllowTcpForwarding no
+            AllowAgentForwarding no
+            ForceCommand internal-sftp
+            PasswordAuthentication yes
+
+    Match User: Tells the SSH server to only apply the following settings to the one user
+    ChrootDirectory: This tells the server what directory our user is allowed to ONLY work within this directory
+    X11Forwading, AllowTCPForwarding, AllowAgentForwarding: Prohibits the user from port forwarding, tunneling and X11 forwarding fot the user. These are all security things.
+    ForceCommand internal-sftp: Forces the SSH server to the run the SFTP program upon access which disables shell access.
+    PasswordAuthentication: Allows for the user to login with a typed password. You can remove this is you would rather use a security key which is by far safer.
+
+    might have to change or remove Force Command
+
+    Restart the SSH Server
+
+        $ /etc/init.d/ssh restart
+
+    what ended up happening was a bug, so i removed from  /etc/ssh/sshd_config
+
+            Match User autospark ChrootDirectory /home
+            X11Forwarding no
+            AllowTcpForwarding no
+            AllowAgentForwarding no
+            ForceCommand internal-sftp
+            PasswordAuthentication yes
+
+
+went back to https://askubuntu.com/questions/420652/how-to-setup-a-restricted-sftp-server-on-ubuntu
+
+    put
+    nm-connection-editor
+
+    I choose the wifi of my place in the gui
+
+    the connection type I choose was wifi
+
+    it stared to get confusing so i went another way
+    
+    in the terminal
+
+    all of a sudden i cannot edit the /etc/ssh/sshd_config
+    
+    changed its permissions to 644
+
+    removed an new user test1 by taking out the directory in /home
+
+    took off the AllowUsers because it seems it not to be the right link
+
+    retry the link and everyhting seemed to went through, guess i needed none of this
+
+    
+
+    

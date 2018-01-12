@@ -1,0 +1,13 @@
+https://linoxide.com/linux-how-to/install-git-ubuntu-16-04/
+
+1st sudo apt
+
+    sudo apt-get update
+    sudo apt-get install git
+    
+    creating identity
+    
+    root@ubuntu:~# git config --global user.name "Saheetha Shameer"
+    root@ubuntu:~# git config --global user.email linoxide1@gmail.com
+    
+    check by using lists root@ubuntu:~# git config --list
