@@ -1,0 +1,46 @@
+https://www.javatpoint.com/install-nodejs-on-linux-ubuntu-centos
+
+-------------------------------------------------------------------------------------------
+    sudo apt-get install python-software-properties
+
+    THEN
+        sudo apt-add-repository ppa:chris-lea/node.js
+
+    press enter to put in that v8 engine
+
+    THEN
+        
+        sudo apt-get update
+
+    HOW EVER
+
+        on the update http://ppa.launchpad.net/chris-lea/node.js/ubuntu xenial Release' does not have a Release file.
+        it wasn't there, we might need a different way to do things
+
+        i means this guys ppa was from 2015, i believe things have changed, once again try to get rid of this
+
+-------------------------------------------------------------------------------------------
+
+
+https://www.godaddy.com/help/install-nodejs-ubuntu-17395
+
+    remember ypu used a ppa to work with node
+
+    For the most recent LTS (the 6.x branch), use:
+        curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
+
+    however its still looking for chris-lea so now you need to remove that ppa rmbr you added it twice
+
+to update
+
+    sudo npm cache clean -f
+    sudo npm install -g n
+    sudo n stable
+
+    it told me it hopes I know what i am doing
+
+    stable resulted in the latest version so it did
+
+    sudo n 8.9.4
+
+    I tested a file and it seemed to work so hopefully easy saling

@@ -1,3 +1,5 @@
+ps. autospark has bad habits of naming anything file extension
+
 legend
 
 open- opened a file for editing
@@ -10,6 +12,7 @@ found- a problem arose
 result- the current state of the computer in reference to the solving the problem in found
 exe- file execution
 phys - physical action or hardware tinkering
+-- failed steps need new ones
 
 5:02 PM
 Friday, January 12, 2018 (EST)
@@ -67,3 +70,73 @@ Friday, January 12, 2018 (EST)
 Time in New York, NY
 
 mike wanted to install atom text editor
+
+
+9:54 PM
+Friday, January 12, 2018 (EST)
+Time in New York, NY
+
+----------------------------------------------------------------------------
+
+    Mike wanted to install cockroachDB on his linux server
+
+    but upon completion he couldn't get v1.0.2 downloaded so he ended up with v1.1.4
+
+    learning_cockroachDB
+
+    he forgot that v1.0.2 was sitting in cockroach and should have taken it out, so he left it
+    he found out that he did not have node installed so he stopped everything he was doing
+    to stop cockroach he killed process
+
+        autospa+  5437  2.6  1.8 335092 148824 pts/4   Sl   21:56   0:20 cockroach start --insecure --host=localhost
+
+    it said it was good
+    he is going to kill the second on but the pid changed from 5737 to 5755
+    it keeps changing its pid
+    he tried to kill it but he cldnt, now he has
+    REMOVE ZOMBIE COCKROACH PROCESS,
+    PROPERLY CLEAN SYSTEM OF COCKROACH STARTING WITH V1.1.4 in that computer folder
+
+----------------------------------------------------------------
+    
+    he started by learning node he might need to download it first
+    
+        he downloaded curl first using
+    
+            sudo apt install curl
+
+        https://askubuntu.com/questions/307/how-can-ppas-be-removed
+        then added ppa-purge
+
+        sudo apt-get install ppa-purge
+
+        then
+            
+            sudo ppa-purge ppa:chris-lea/node.js
+            
+        cldnt do it , bash said apt-get update failed for some reason and when going to /etc/apt/sources.list.d the files related to chris-lea ppa were still there, so we need to update the update
+
+
+        further steps
+
+            sudo apt-get upgrade
+            sudo ppa-purge ppa:chris-lea/node.js  ---------
+            sudo apt-get update
+            sudo ppa-purge ppa:chris-lea/node.js  ---------
+            cd /etc/apt/sources.list.d
+            rm chris-lea-ubuntu-node_js-xenial.list chris-lea-ubuntu-node_js-xenial.list.save
+            sudo rm chris-lea-ubuntu-node_js-xenial.list chris-lea-ubuntu-node_js-xenial.list.save
+            cd /home/autospark/My_Computer/Summer_2017/Node_folder
+            curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
+                ** it told me run it as root but I used sudo instead its the same right??**
+            sudo apt-get install nodejs
+
+            Sucess
+
+        on executing sudo npm cache clean -f
+        it told me it hopes I know what i am doing
+            
+        I continued upon finishing updating and trying out the test, everything went good so I guess we are alright
+            
+
+            
