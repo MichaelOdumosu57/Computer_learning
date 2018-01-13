@@ -139,4 +139,27 @@ Time in New York, NY
         I continued upon finishing updating and trying out the test, everything went good so I guess we are alright
             
 
-            
+11:36 PM
+Friday, January 12, 2018 (EST)
+Time in New York, NY
+
+    Mike decided to run sudo apt-get dist-upgrade
+    on the site he referred to it seems to be that he was supposed to run
+
+    	
+     upgrade or dist-upgrade, not both, and update always comes first. – Reinier Post Oct 12 '16 at 14:04
+    https://askubuntu.com/questions/449032/29-packages-can-be-updated-how
+
+3:19 PM
+Saturday, January 13, 2018 (EST)
+Time in New York, NY
+
+    so while writing to stringdeecoder_example1.js in /home/autospark/My_Computer/Summer_2017/Node_folder from
+    192.168.1.4, confusion occured, the  terminal could not really remove the file and had to use remote default file manager to remove it properly
+
+
+4:17 PM
+Saturday, January 13, 2018 (EST)
+Time in New York, NY
+
+    Michael wanted to write an argument to a batch script, and slightly modifed things, so the the file was precreated, not created from the shell using the $1 as the variable to represent the message string for github

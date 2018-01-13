@@ -1,0 +1,11 @@
+to pass an argument to shell scripts
+
+$ cat myscript
+#!/bin/bash
+echo "First arg: $1"
+echo "Second arg: $2"
+$ ./myscript hello world
+First arg: hello
+Second arg: world
+
+https://unix.stackexchange.com/questions/31414/how-can-i-pass-a-command-line-argument-into-a-shell-script
