@@ -163,3 +163,29 @@ Saturday, January 13, 2018 (EST)
 Time in New York, NY
 
     Michael wanted to write an argument to a batch script, and slightly modifed things, so the the file was precreated, not created from the shell using the $1 as the variable to represent the message string for github
+
+    SUCCESS
+
+4:35 PM
+Saturday, January 13, 2018 (EST)
+Time in New York, NY
+
+    Reference
+    /home/autospark/My_Computer/Summer_2017/Node_folder/Express_folder/learning_express.txt
+
+    Michael decided to install express here are the steps he executed
+
+        npm install -g express
+        sudo npm install -g express
+        npm install body-parser --save
+            forgot npm init so it made a package-lock.json
+        npm install cookie-parser --save
+            npm is really looking for the package.json file so he finally init it
+        npm init
+            it made the entry point basic_express.js
+        npm install multer --save
+            put every local npm package into the json, package-lock.json seems to hold everything needed to npm to run
+        he tried to run an express app and looks like you need express locally -----
+        sudo npm install express --save
+
+        SUCCESS
