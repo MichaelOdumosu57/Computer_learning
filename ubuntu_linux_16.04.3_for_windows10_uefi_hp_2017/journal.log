@@ -1,3 +1,16 @@
+legend
+
+open- opened a file for editing
+Sucess- everything went something, he didn't leave anything undone
+mod - changed the permission of the file, when doing this make sure to record the orignal in info
+visit - go to a directory or a file
+person - use the information to contact the person working on the file
+added- confusing, but when you editing the file
+found- a problem arose
+result- the current state of the computer in reference to the solving the problem in found
+exe- file execution
+phys - physical action or hardware tinkering
+
 5:02 PM
 Friday, January 12, 2018 (EST)
 Time in New York, NY
@@ -7,3 +20,50 @@ now mike wants to install tmux on his server
 
 
 Sucess
+file:installing_tmux.tmux
+
+5:34 PM
+Friday, January 12, 2018 (EST)
+Time in New York, NY
+
+    Mike wanted to enable ssh connection while lid is closed
+    
+    condition
+    remote from chromebook, transfer to local control
+    power input added,
+    3 tabs mozilla firefox
+    
+    reference
+    https://askubuntu.com/questions/360615/ubuntu-server-13-10-now-goes-to-sleep-when-closing-laptop-lid?newreg=c4b8d139bd37478488035c27fbdcfd12
+    person - dvad availabs help
+    
+    
+    info
+    version - 16.04.1
+    chmod - /etc/systemd/logind.conf 644
+    
+    steps
+    
+        visit - /etc/systemd/logind.conf
+        mod -  /etc/systemd/logind.conf  to 646
+        open - /etc/systemd/logind.conf
+        added - HandleLidSwitch=ignore
+    
+    lost connection, working from server
+        
+        found -take care of .swp file
+            result- .swp file seemed to have disappered
+        exe - sudo service systemd-logind restart
+        phys - closed laptop
+        visit- remote connection from chrome laptop
+    
+    Sucess
+    
+    to do
+        chmod all to original
+
+7:10 PM
+Friday, January 12, 2018 (EST)
+Time in New York, NY
+
+mike wanted to install atom text editor

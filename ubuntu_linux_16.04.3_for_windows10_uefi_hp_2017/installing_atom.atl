@@ -1,0 +1,15 @@
+http://tipsonubuntu.com/2017/05/16/easily-install-atom-text-editor-ubuntu-16-04-higher/
+
+    install snapd daemon
+
+        sudo apt install snapd
+
+    then install the editor
+
+        sudo snap install atom --classic
+
+        restart to use it
+
+    3. (Optional) Once a new release is out, install updates via command:
+    
+        sudo snap refresh atom
