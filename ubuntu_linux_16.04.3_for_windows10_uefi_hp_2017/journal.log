@@ -189,3 +189,17 @@ Time in New York, NY
         sudo npm install express --save
 
         SUCCESS
+
+11:05 PM
+Saturday, January 13, 2018 (EST)
+Time in New York, NY
+
+
+    Mike wanted to instal pug, an express template engine
+
+            npm install pug --save
+            npm init
+            change to  app.set('views','MyViews'). in server.js file
+                default views
+
+            SUCCESS
