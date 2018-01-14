@@ -12,6 +12,7 @@ found- a problem arose
 result- the current state of the computer in reference to the solving the problem in found
 exe- file execution
 phys - physical action or hardware tinkering
+made- system made a file somewhere OR MADE A Change based on what you did
 -- failed steps need new ones
 
 5:02 PM
@@ -203,3 +204,96 @@ Time in New York, NY
                 default views
 
             SUCCESS
+
+10:07 AM
+Sunday, January 14, 2018 (EST)
+Time in New York, NY
+
+    Mike wanted to restart the business and stats API back onto linux
+
+    references
+    https://stackoverflow.com/questions/1709177/git-pull-a-certain-branch-from-github
+
+    git clone https://github.com/availabs/SQL-and-Business-properties
+    cd SQL-and-Business-properties/
+    npm init
+    open - server.js
+        he found that this app related to the tutorial he worked with earlier
+    cd /home/autospark/My_Computer/SQL-and-Business-properties/node-postgres-promises
+    open - app.js
+    npm init
+    npm install -- save
+    found - jade has been remanaed to pug so I need to install pug
+        result installed jade, and changed the view engine
+    npm install pug --save
+    open - app.js
+        changed the view engine from jade to pug
+            app.set('view engine', 'jade'); ->> app.set('view engine', 'pug');
+    npm start
+         made- returned an error made a file
+            /home/autospark/.npm/_logs/2018-01-14T15_21_59_010Z-debug.log
+    npm start
+         made- returned an error made a file
+            /home/autospark/.npm/_logs/2018-01-14T15_24_23_564Z-debug.log
+    npm install bluebird --save
+    npm start
+    now to know where to see it
+    in additon
+        made ~/My_Computer/SQL-and-Business-properties/node-postgres-promises/package-lock.json
+    npm start
+    found -- returned an error
+        result -- changed the view engine to jade and require the external .js files for the variables that were not declared in the app js file
+        open -- /home/autospark/My_Computer/SQL-and-Business-properties/node-postgres-promises/app.js
+            edit -- configuration with view engine
+            took out all view files, didn't work mabye it still needs to be jade
+            changed to jade good now it saying router is not defined
+        realized master is the wrong branch so I try to change branches
+        git pull https://github.com/availabs/SQL-and-Business-properties/tree/demeter_ver
+        git fetch https://github.com/availabs/SQL-and-Business-properties/tree/demeter_ver
+        git branch -f demeter_ver origin/demeter_ver
+        npm start
+            found -returned same error
+        open -- /home/autospark/My_Computer/SQL-and-Business-properties/node-postgres-promises/app.js
+            edit -- changed
+            app.get('/', function(req, res, next) {
+              router.get('/API/geobyzip/:zipcode', db.geobyzip);
+            });
+            to
+            app.get('/', function(req, res, next) {
+              res.get('/API/geobyzip/:zipcode', db.geobyzip);
+            });
+            added
+
+            var promise = require('bluebird');
+            
+            var options = {
+              // Initialization Options
+              promiseLib: promise
+            };
+            var pgp = require('pg-promise')(options);
+            var connectionString = 'postgres://postgres:Jedi21funk@mars.availabs.org:5432/infogroup';
+            var db = pgp(connectionString);
+
+            from /home/autospark/My_Computer/SQL-and-Business-properties/node-postgres-promises/queries.js
+    it seems to be app.js does not know about externally declared files or need additional work with postgres and SQL
+            node app.js
+            npm start
+            found -- returned a warning saying I was creating a duplicate database object and the server did not return anything
+            cd routes
+            open -- index.js
+    I found the var routes was equal to an express method so it seems there is something wrong with module exports it might not be in use of for this version
+    of express
+        open --- app.js
+            edit --added
+                var db = require('./queries');
+                var router = require('./routes/index')
+
+    so npm runs but the client is waiting for a response it might be that I have to open the page from html
+    open /home/autospark/My_Computer/SQL-and-Business-properties/index.html
+    found -- could not find important files for the function
+        result --changes added https in front
+        edit --
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
+    refreshed the html browser and everything works fine
+    SUCCESS
