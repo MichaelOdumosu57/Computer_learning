@@ -381,3 +381,21 @@ Time in New York, NY
     mike ran the bash command
     found --
         result -- it put me in another terminal and I needed to use exit to exit the virtual bash then logout to logout
+
+8:38 AM
+Monday, January 15, 2018 (EST)
+Time in New York, NY
+
+    Mike attempted to put his batch files in bin
+    
+    steps
+    cd /home/autospark/Script_helpers
+    mv ./* /bin
+    sudo mv ./* /bin
+    git reset HEAD soft^
+    found -- made a mistake I do not know what happenened
+        it seems to focus on file that have not been tracked and forgets changes to modified content
+        git reset --soft HEAD^
+        git add .
+        git reset HEAD cockroach-data/
+        git reset HEAD cockroach-v1.1.4.linux-amd64/
