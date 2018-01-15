@@ -31,41 +31,41 @@ Friday, January 12, 2018 (EST)
 Time in New York, NY
 
     Mike wanted to enable ssh connection while lid is closed
-    
+
     condition
     remote from chromebook, transfer to local control
     power input added,
     3 tabs mozilla firefox
-    
+
     reference
     https://askubuntu.com/questions/360615/ubuntu-server-13-10-now-goes-to-sleep-when-closing-laptop-lid?newreg=c4b8d139bd37478488035c27fbdcfd12
     person - dvad availabs help
-    
-    
-    info
+
+
     version - 16.04.1
     chmod - /etc/systemd/logind.conf 644
-    
+
     steps
-    
+
         visit - /etc/systemd/logind.conf
         mod -  /etc/systemd/logind.conf  to 646
         open - /etc/systemd/logind.conf
         added - HandleLidSwitch=ignore
-    
+
     lost connection, working from server
-        
+
         found -take care of .swp file
             result- .swp file seemed to have disappered
         exe - sudo service systemd-logind restart
         phys - closed laptop
         visit- remote connection from chrome laptop
-    
+
     Sucess
-    
+
     to do
         chmod all to original
 
+        info
 7:10 PM
 Friday, January 12, 2018 (EST)
 Time in New York, NY
@@ -99,11 +99,11 @@ Time in New York, NY
     PROPERLY CLEAN SYSTEM OF COCKROACH STARTING WITH V1.1.4 in that computer folder
 
 ----------------------------------------------------------------
-    
+
     he started by learning node he might need to download it first
-    
+
         he downloaded curl first using
-    
+
             sudo apt install curl
 
         https://askubuntu.com/questions/307/how-can-ppas-be-removed
@@ -112,9 +112,9 @@ Time in New York, NY
         sudo apt-get install ppa-purge
 
         then
-            
+
             sudo ppa-purge ppa:chris-lea/node.js
-            
+
         cldnt do it , bash said apt-get update failed for some reason and when going to /etc/apt/sources.list.d the files related to chris-lea ppa were still there, so we need to update the update
 
 
@@ -136,9 +136,9 @@ Time in New York, NY
 
         on executing sudo npm cache clean -f
         it told me it hopes I know what i am doing
-            
+
         I continued upon finishing updating and trying out the test, everything went good so I guess we are alright
-            
+
 
 11:36 PM
 Friday, January 12, 2018 (EST)
@@ -147,7 +147,7 @@ Time in New York, NY
     Mike decided to run sudo apt-get dist-upgrade
     on the site he referred to it seems to be that he was supposed to run
 
-    	
+
      upgrade or dist-upgrade, not both, and update always comes first. – Reinier Post Oct 12 '16 at 14:04
     https://askubuntu.com/questions/449032/29-packages-can-be-updated-how
 
@@ -265,7 +265,7 @@ Time in New York, NY
             added
 
             var promise = require('bluebird');
-            
+
             var options = {
               // Initialization Options
               promiseLib: promise
@@ -297,3 +297,87 @@ Time in New York, NY
         <script src="https://d3js.org/topojson.v1.min.js"></script>
     refreshed the html browser and everything works fine
     SUCCESS
+
+  11:04 PM
+  Sunday, January 14, 2018 (EST)
+  Time in New York, NY
+
+    ssh seems to be rejecting my invitation
+
+      steps
+      sudo systemctl restart ssh
+      noticed wifi on computer was off :)
+
+      SUCCESS
+      
+11:30 PM
+Sunday, January 14, 2018 (EST)
+Time in New York, NY
+
+    ran the bat file with out proper arguments
+
+        reference
+        /home/autospark/Script_helpers/website_git.bat
+
+        steps
+        ./website_git.bat Sharon_website sharon_website.zip sharon_website
+            --resulte
+            unzip:  cannot find or open sharon_website.zip, sharon_website.zip.zip or sharon_website.zip.ZIP.
+            mv: cannot stat '.git/': No such file or directory
+            mv: cannot stat 'sharon_website/': No such file or directory
+            rm: cannot remove '*/': No such file or directory
+            mv: cannot move 'sharon_website/' to a subdirectory of itself, 'sharon_website/sharon_website'
+        ./website_git.bat
+        --result
+            unzip:  cannot find or open , .zip or .ZIP.
+            mv: cannot stat '.git/': No such file or directory
+            mv: inter-device move failed: '/' to '..'; unable to remove target: Directory not empty
+
+he found that he tossed the .git file contained in sharon_website
+        rm -rf Sharon_website/
+            --result wrong directory
+        rm -rf sharon_website/
+        git pull https://github.com/KDCShowEntertainment/kdcshowentertainment.github.io
+        found - didn't make a new directory
+            remote: Counting objects: 138, done.
+            remote: Compressing objects: 100% (94/94), done.
+            remote: Total 138 (delta 81), reused 99 (delta 42), pack-reused 0
+            Receiving objects: 100% (138/138), 3.94 MiB | 6.59 MiB/s, done.
+            Resolving deltas: 100% (81/81), done.
+            From https://github.com/KDCShowEntertainment/kdcshowentertainment.github.io
+             * branch            HEAD       -> FETCH_HEAD
+        mkdir Sharon_website
+        cd Sharon_website/
+        git pull https://github.com/KDCShowEntertainment/kdcshowentertainment.github.io
+        git fetch https://github.com/KDCShowEntertainment/kdcshowentertainment.github.io
+        git clone https://github.com/KDCShowEntertainment/kdcshowentertainment.github.io
+        git init
+        rm -rf .git
+        mv kdcshowentertainment.github.io/ ../
+        cd ..
+        ls
+        rm -rf Sharon_website/
+        mv kdcshowentertainment.github.io/ Sharon_website/
+        ./website_git.bat Sharon_website sharon_website.zip sharon_website
+        found -- forgot to download zip file again
+            -result did it again
+        ./website_git.bat Sharon_website sharon_website.zip sharon_website
+        got to get rid of things properly
+        rm -rf sharon_website
+        cd ../../../Script_helpers/
+        ./website_git.bat Sharon_website sharon_website.zip sharon_website
+        worked
+        cd /home/autospark/Script_helpers
+        edited website_git.bat
+
+        on checking my My_Computer folder, I ran into a problem, my zip unzip into that folder, i had to carefully remove all those files
+        SUCCESS
+        
+
+11:57 PM
+Sunday, January 14, 2018 (EST)
+Time in New York, NY
+
+    mike ran the bash command
+    found --
+        result -- it put me in another terminal and I needed to use exit to exit the virtual bash then logout to logout
