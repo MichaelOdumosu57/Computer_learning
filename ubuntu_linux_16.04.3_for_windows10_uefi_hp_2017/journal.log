@@ -399,3 +399,49 @@ Time in New York, NY
         git add .
         git reset HEAD cockroach-data/
         git reset HEAD cockroach-v1.1.4.linux-amd64/
+
+    SUCCESS
+
+12:11 AM
+Wednesday, January 17, 2018 (EST)
+Time in New York, NY
+
+    Mike ran website_git.bat jquery_adv_clone Jquery_adv_clone.zip Jquery_adv_clone "jquery_adv_clone-0.1.2.js can clone any amount user wants to"
+
+    he came into a problem
+
+        steps
+
+        git reset --hard HEAD^
+            found --jquery project doesn't have a .git so it revert My_Computer
+                result - retrieve the missing folders from my computer, and stop using .bat files for complicated work
+                rm A.png B.png bootstrap.min.js bootstrap.min.css calendar.html chancur.ttf contact_us.html C.png glyphicons-halflings-regular.ttf glyphicons-halflings-regular.woff glyphicons-halflings-regular.woff2 index.html jquery-1.10.2.js jquery_michael_toggle.js jquery.min.js jquery_parallax.js jquery_rolodex.js jquery_rotate.js jquery-ui.js navigation.js roses_background.jpg roses_background.png sharon_style.css site_map_instruction.js smoothness_jquery-ui.css story_vote.html template.html ui-lightness_jquery-ui.css venues.html
+                rm -rf PEXELS_Images/
+
+lost files
+                 meetup_and_events           FRAMES   websites_learning Tutorials
+      
+                                   
+
+            cp -i My_Computer/ computer_problem/
+            cp -a My_Computer/. computer_problem/
+somewhere you have seemed to copy the .git for Sharon website into your folder,
+            rm .git
+            also saving_ualbany_server_info
+            check your usb
+            Jquery_projects .git folder got corrupted, not good mike
+
+12:39 AM
+Wednesday, January 17, 2018 (EST)
+Time in New York, NY
+
+        Jquery_projects .git folder got corrupted, mike is trying to fix this
+
+            steps
+            rm -rf Jquery_project/
+            git clone https://github.com/MichaelOdumosu57/Jquery_projects
+            unzip jquery_adv_clone.zip -d ./
+            rm jquery_adv_clone.zip
+            rm jquery_adv_clone-0.0.1.js jquery_adv_clone-0.1.1.js
+            mv jquery_adv_clone-0.1.2.js jquery_adv_clone.js
+            rm -rf computer_problem/
