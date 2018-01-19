@@ -309,7 +309,7 @@ Time in New York, NY
       noticed wifi on computer was off :)
 
       SUCCESS
-      
+
 11:30 PM
 Sunday, January 14, 2018 (EST)
 Time in New York, NY
@@ -372,7 +372,7 @@ he found that he tossed the .git file contained in sharon_website
 
         on checking my My_Computer folder, I ran into a problem, my zip unzip into that folder, i had to carefully remove all those files
         SUCCESS
-        
+
 
 11:57 PM
 Sunday, January 14, 2018 (EST)
@@ -387,7 +387,7 @@ Monday, January 15, 2018 (EST)
 Time in New York, NY
 
     Mike attempted to put his batch files in bin
-    
+
     steps
     cd /home/autospark/Script_helpers
     mv ./* /bin
@@ -420,8 +420,8 @@ Time in New York, NY
 
 lost files
                  meetup_and_events           FRAMES   websites_learning Tutorials
-      
-                                   
+
+
 
             cp -i My_Computer/ computer_problem/
             cp -a My_Computer/. computer_problem/
@@ -430,6 +430,7 @@ somewhere you have seemed to copy the .git for Sharon website into your folder,
             also saving_ualbany_server_info
             check your usb
             Jquery_projects .git folder got corrupted, not good mike
+            rm -rf computer_problem/
 
 12:39 AM
 Wednesday, January 17, 2018 (EST)
@@ -444,4 +445,63 @@ Time in New York, NY
             rm jquery_adv_clone.zip
             rm jquery_adv_clone-0.0.1.js jquery_adv_clone-0.1.1.js
             mv jquery_adv_clone-0.1.2.js jquery_adv_clone.js
-            rm -rf computer_problem/
+
+
+
+YOU GOT A LOT TO FIX TMR NIGHT, dont spend time wasting time!!!
+
+1:21 PM
+Wednesday, January 17, 2018 (EST)
+Time in New York, NY
+
+        Mike is trying to fix what he did with this computer
+
+        steps
+        he put his UBUNTU 16_0 usb into the computer
+        he moved michael57.subsets.2.tar.gz to home and copied it back into UBUNTU 16_0
+        cd MICHAEL57
+        tar xvzf michael57.subsets.2.tar.gz
+        rm michael57.subsets.2.tar.gz
+        ssh mo422733@itsunix.albany.edu
+        found still trying to connect
+        said it took to long to connect
+        you still might everything from ualbany
+
+        11:05 PM
+        Thursday, January 18, 2018 (EST)
+        Time in New York, NY
+
+
+        CONTINUE
+        scp -r mo422733@itsunix.albany.edu:/home1/s/m/mo422733/saving.zip ./
+        
+
+
+
+4:20 PM
+Wednesday, January 17, 2018 (EST)
+Time in New York, NY
+
+  MIKE wants to install file zilla net_client
+
+  reference
+  http://ubuntuhandbook.org/index.php/2016/06/install-latest-filezilla-ubuntu-16-04/
+  http://www.getdeb.net/app/FileZilla
+
+
+  notes
+  While the official Linux binary is not well integrated with Ubuntu, the GetDeb repository now builds FileZilla for Ubuntu 16.04, so far it’s version 3.19.0.
+
+
+    steps
+    when clicking on the download link I choose aptURL to open the link
+    i choose to install filezilla
+    i gave my password
+    terminal
+    found -- didnt work
+
+11:38 PM
+Thursday, January 18, 2018 (EST)
+Time in New York, NY
+
+        os did something strange, it tried to install filezilla again
