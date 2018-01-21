@@ -554,3 +554,145 @@ Time in New York, NY
         rm -rf saving/
         zip -r My_Computer.zip My_Computer/
         moved the zip folder to the usb
+        rm My_Computer.zip
+
+        SUCCESS
+
+        12:43 PM
+      Sunday, January 21, 2018 (EST)
+      Time in New York, NY
+
+      Mike wants to backup his OS along with all his files using the native OS backup systemd
+
+      reference
+      https://www.youtube.com/watch?v=_vdTdx9uvuQ
+
+      steps
+        open SYSTEM settings
+        open backups
+        choose the second button to install the necessary software
+        before backuing up michael wanted some folders to be ignored
+        so I choose ones that had .git extensions or node modules because they are really big and useless
+        its asking me for a password,I will put the same one to login to my desktop because it is long and hard
+
+        SUCCESS
+
+
+3:14 PM
+Sunday, January 21, 2018 (EST)
+Time in New York, NY
+
+        Mike wants to setup an NGINX server on his linux laptop
+
+        reference
+        1. https://www.digitalocean.com/community/tutorials/nginx-essentials-installation-and-configuration-troubleshooting
+        1A. https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-16-04
+        2 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04
+        3 .https://www.digitalocean.com/community/tutorials/how-to-set-up-a-host-name-with-digitalocean
+        4. https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04
+        with
+        /home/autospark/My_Computer/Computer_Folder/ubuntu_linux_16.04.3_for_windows10_uefi_hp_2017/nginx/setting_up_nginx_server_blocks.ngxblk
+
+        version
+        chmod -  /var/www -755
+
+        says that
+        guide assumes that you’re working with a version of Nginx installed from the default repositories of a Debian-based distribution
+
+        steps
+1
+        ln -s /bin/git_superbranch_backup_control.bat ~/Script_helpers/
+        ln -s /bin/website_git.bat ~/Script_helpers/
+        sudo apt-get update
+        sudo apt-get install nginx
+1A
+        sudo ufw app list
+            Nginx Full: This profile opens both port 80 (normal, unencrypted web traffic) and port 443 (TLS/SSL encrypted traffic)
+            Nginx HTTP: This profile opens only port 80 (normal, unencrypted web traffic)
+            Nginx HTTPS: This profile opens only port 443 (TLS/SSL encrypted traffic
+Since we haven't configured SSL for our server yet, in this guide, we will only need to allow traffic on port 80.
+        sudo ufw allow 'Nginx HTTP'
+        sudo ufw status
+        found -- returns inactive
+            result starting ufw with step 2
+2
+            cd /etc/default/
+            sudo vim ufw
+                added -- IPV6=yes
+Let's set your UFW rules back to the defaults
+            sudo ufw default deny incoming
+            sudo ufw default allow outgoing
+this might not allow me to do things remotely, switching to local server then
+Now allow incoming ssh
+            sudo ufw allow ssh
+same as
+            sudo ufw allow 22
+if you changed it you must type in the port number
+to enable UFW
+            sudo ufw enable
+            sudo ufw allow from 192.168.1.7
+1A
+        systemctl status nginx
+As you can see above, the service appears to have started successfully. However, the best way to test this is to actually request a page from Nginx.
+You can access the default Nginx landing page to confirm that the software is running properly. You can access this through your server's domain name or IP address.
+to setup up a domain name
+3
+        make a digitalocean dns account
+        not a good idea, impossible to contact customer service, do not know what is free or not
+1A
+        ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+        try the results in the web browser see if they work
+        [my step]
+        ip addr
+        ip addr show [number_key] | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+        try the results in the web browser see if they work
+so it might be using localhost 127.0.0.1
+ip addr show lo | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+so it might be using its indiviual ip 192.168.1.4
+ip addr show wlo1 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+
+we'll try to work with that individual ip
+
+        the nginx server is running properly
+
+4
+I dont think I can use the url example.com and test.com. I see example.com was made for it while someone must be using test.com so I only used test.com
+        sudo mkdir -p /var/www/example.com/html
+        sudo chown -R $USER:$USER /var/www/example.com/html
+        
+        mkdir ok
+        sudo chmod -R 755 .ok
+        sudo rm -rf ok
+Do not need to change /var/www
+        vim /var/www/example.com/html/index.html
+        added- some content
+        sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/example.com
+        sudo vim /etc/nginx/sites-available/example.com
+        added -- some edting
+        grep -R default_server /etc/nginx/sites-enabled/
+        sudo vim /etc/nginx/nginx.conf
+        added -uncommented a line
+        sudo nginx -t
+        sudo systemctl restart nginx
+        local $ sudo nano /etc/hosts
+        found --error local can only be used in a function
+        sudo vim /etc/hosts
+            added -- host name and example site I wanted to work with
+            useless but helps for a bit
+
+1
+        SUCCESS
+        now you need a domain name
+        and figure out how to host any of your index pages on /var/www/html
+
+6:28 PM
+Sunday, January 21, 2018 (EST)
+Time in New York, NY
+
+        Mike wants to setup ufw so that only his laptop can ssh and sftp with the nginx server
+        steps
+        sudo ufw status numbered
+        sudo ufw delete 22
+        sudo ufw delete 22 (v6)
+
+        SUCCESS

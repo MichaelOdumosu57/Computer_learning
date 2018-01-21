@@ -1,0 +1,61 @@
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04
+to enable UFW
+    sudo ufw enable
+
+ allow incoming ssh
+    sudo ufw allow 22
+    sudo ufw allow ssh
+
+allow HTTP
+    sudo ufw allow http
+    sudo ufw allow 80
+
+allow https
+  sudo ufw allow https
+  sudo ufw allow 443
+
+allow FTP
+  sudo ufw allow ftp
+  sudo ufw allow 21/tcp
+
+allow X11 connections
+    sudo ufw allow 6000:60007/tcp
+    sudo ufw allow 6000:60007/udp
+
+to allow from certain IP addresses
+    sudo ufw allow from x.x.x.x
+
+    to specify port
+      sudo ufw allow from x.x.x.x to any port y
+
+to allow subnets
+ex:15.15.15.1 to 15.15.15.254
+    sudo ufw allow from 15.15.15.0/24
+
+create firewall rule only for specific network interface
+  ip addr
+shows eth0 or eth1
+if your server has public network interface called eth0 u cld allow HTTP traffic to it
+  sudo ufw allow in on eth0 to any port 80
+if want MySQL database server 3306 to listen for private connectins used
+  sudo ufw allow in on eth1 to any port 3306
+
+to deny connections
+
+  sudo ufw deny [port or protocol]
+
+  to deny an ip
+
+  sudo ufw deny from x.x.x.x
+
+to delete a rule by rule number
+  sudo ufw status numbered
+  sudo ufw delete [number]
+
+by actual rules
+
+    sudo ufw delete [rule]
+
+check ufw status
+
+  sudo ufw status verbose
