@@ -474,7 +474,7 @@ Time in New York, NY
 
         CONTINUE
         scp -r mo422733@itsunix.albany.edu:/home1/s/m/mo422733/saving.zip ./
-        
+
 
 
 
@@ -505,3 +505,52 @@ Thursday, January 18, 2018 (EST)
 Time in New York, NY
 
         os did something strange, it tried to install filezilla again
+
+
+3:18 AM
+Friday, January 19, 2018 (EST)
+Time in New York, NY
+
+    mike pressed ctrl-s on the remote ssh, freezing it in the middle of pushing a git repods
+
+
+5:38 PM
+Saturday, January 20, 2018 (EST)
+Time in New York, NY
+
+  Mike wanted to fix what he messed up on 12:39 wed jan 17
+
+    steps
+    open files
+    remanme MICHAEL57/michael57 to *58
+    moved michael58 to home
+    rm -rf MICHAEL57
+    move meetup_and_events FRAMES and changed websites to website_learning and moved it to my computer
+    rm -rf
+    unzip saving.zip -d ./
+    found corrupted home folders
+      result -- find and delete all files related to saving.zip
+      rm .cshrc .login .logout .bash_profile .msgsrc Account\ Inquiry.html
+      rm -rf XML_Folder
+      mkdir saving
+      mv saving.zip saving/
+      unzip saving.zip -d ./
+
+
+      11:24 AM
+      Sunday, January 21, 2018 (EST)
+      Time in New York, NY
+
+
+      contunation
+        steps
+        cd My_Computer/saving_ualbany_server_info
+        mv ../../saving/byte_academy_challenge ./
+        mv ../../saving/do_not_delete/ ./
+         mv ../../saving/project03/ ./
+        mv ../../saving/send_as_assignment/ ./
+        moved Account Inquiry.html and Imaging1.1.7.tar.gz to saving_ualbany_server_info
+        cd ../../
+        rm -rf saving/
+        zip -r My_Computer.zip My_Computer/
+        moved the zip folder to the usb
